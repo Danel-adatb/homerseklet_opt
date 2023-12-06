@@ -30,14 +30,14 @@ class Frontend {
     public function login_content() {
 
         //TODO
-        if(count($_POST) > 0) {
+        /*if(count($_POST) > 0) {
             $errors = User::check_instance()->login($_POST);
     
             if(empty($errors['email_error']) && empty($errors['password_error']) && empty($errors['invalid_data'])) {
                 header('Location: index.php');
                 die;
             }
-        }
+        }*/
 
         $return =
             '<div class="container">
@@ -76,9 +76,10 @@ class Frontend {
         $output = '';
 
         $output.= $this->header();
-        if(isset($_POST['email']) && isset($_POST['password'])) {
-            $output.= $this->login_content();   
-        }
+        /*if(isset($_POST['email']) && isset($_POST['password'])) {
+            
+        }*/
+        $output.= $this->login_content();   
 
         return $output;
     }
